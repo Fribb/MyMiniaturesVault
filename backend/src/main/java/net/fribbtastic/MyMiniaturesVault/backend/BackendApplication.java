@@ -1,4 +1,4 @@
-package net.fribbtastic.MyMiniatureVault.backend;
+package net.fribbtastic.MyMiniaturesVault.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

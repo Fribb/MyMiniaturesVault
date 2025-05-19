@@ -5,12 +5,12 @@
 
 	<parent>
 		<groupId>net.fribbtastic</groupId>
-		<artifactId>MyMiniatureVault</artifactId>
+		<artifactId>MyMiniaturesVault</artifactId>
 		<version>${revision}</version>
 	</parent>
 
 	<artifactId>backend</artifactId>
-	<name>MyMiniatureVault-backend</name>
+	<name>MyMiniaturesVault-backend</name>
 
 	<packaging>jar</packaging>
 

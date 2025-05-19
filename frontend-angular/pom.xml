@@ -5,12 +5,12 @@
 
 	<parent>
 		<groupId>net.fribbtastic</groupId>
-		<artifactId>MyMiniatureVault</artifactId>
+		<artifactId>MyMiniaturesVault</artifactId>
 		<version>${revision}</version>
 	</parent>
 
 	<artifactId>frontend-angular</artifactId>
-	<name>MyMiniatureVault-frontend-angular</name>
+	<name>MyMiniaturesVault-frontend-angular</name>
 
 	<packaging>jar</packaging>
 
