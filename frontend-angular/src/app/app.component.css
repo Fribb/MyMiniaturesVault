@@ -19,20 +19,14 @@
   overflow: hidden;
 }
 
-.main-content {
+tui-root {
+  border: 1px solid black;
   flex: 1;
   overflow-y: auto;
   padding: 1rem;
   border-radius: 1.25rem 1.25rem 0 0;
   box-shadow: 0 -1.5rem black;
-}
-
-.DarkModeText {
-  margin: 0;
-}
-
-.DarkModeButton {
-  margin-top: 0.16rem;
+  background: var(--tui-background-base);
 }
 
 header[tuiNavigationHeader][tuiNavigationHeader] [tuiNavigationLogo] {

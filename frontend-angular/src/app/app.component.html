@@ -14,13 +14,8 @@
     Notifications
     <tui-badge-notification/>
   </button>
-  <tui-opt-group>
-    <label tuiLabel>
-      <input class="DarkModeButton" size="s" tuiSwitch type="checkbox" [(ngModel)]="switch" />
-      <span class="DarkModeText" tuiTitle>Dark mode</span>
-    </label>
-  </tui-opt-group>
   -->
+  <button tuiIconButton appearance="secondary-grayscale" [iconStart]="toggleDarkMode() ? '@tui.sun' : '@tui.moon'" size="s" type="button" (click)="darkModeService.darkMode.set(!toggleDarkMode())" [tuiHint]="toggleDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'" ></button>
 </header>
 <div class="content-container">
   <aside class="sidebar" [tuiNavigationAside]="expanded()">
@@ -38,7 +33,9 @@
       </button>
     </footer>
   </aside>
-  <main class="main-content">
+
+  <!--suppress HtmlUnknownAttribute -->
+  <tui-root tuiAppearance [attr.tuiTheme]="toggleDarkMode() ? 'dark' : null">
     <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-  </main>
+  </tui-root>
 </div>
