@@ -1,41 +1,50 @@
-<header tuiNavigationHeader>
-  <span tuiNavigationLogo>
-        <!--<tui-icon icon="@tui.home"/>-->
-        <span tuiFade>MyMiniatureVault</span>
-    </span>
-    <span tuiNavigationSegments>
-    </span>
-  <hr/>
-  <!--
-  <button appearance="secondary-grayscale" iconStart="@tui.plus" tuiButton type="button">
-    Create
-  </button>
-  <button iconStart="@tui.bell" tuiIconButton type="button">
-    Notifications
-    <tui-badge-notification/>
-  </button>
-  -->
-  <button tuiIconButton appearance="secondary-grayscale" [iconStart]="toggleDarkMode() ? '@tui.sun' : '@tui.moon'" size="s" type="button" (click)="darkModeService.darkMode.set(!toggleDarkMode())" [tuiHint]="toggleDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'" ></button>
-</header>
-<div class="content-container">
-  <aside class="sidebar" [tuiNavigationAside]="expanded()">
-    <header>
-      <button iconStart="@tui.home" tuiAsideItem type="button">Home</button>
-      <button iconStart="@tui.user" tuiAsideItem type="button">Creators</button>
-      <button iconStart="@tui.boxes" tuiAsideItem type="button">Bundles</button>
-    </header>
-    <button iconStart="@tui.plus" tuiAsideItem type="button">Add</button>
-    <footer>
-      <hr/>
-      <button tuiAsideItem type="button" [iconStart]="expanded() ? '@tui.chevron-left' : '@tui.chevron-right'"
-              (click)="handleToggle()">
-        {{ expanded() ? 'Collapse' : 'Expand' }}
-      </button>
-    </footer>
-  </aside>
-
-  <!--suppress HtmlUnknownAttribute -->
-  <tui-root tuiAppearance [attr.tuiTheme]="toggleDarkMode() ? 'dark' : null">
-    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-  </tui-root>
-</div>
+<!--suppress HtmlUnknownAttribute -->
+<tui-root tuiAppearance [attr.tuiTheme]="toggleDarkMode() ? 'dark' : null">
+  <div class="app-layout">
+    <!-- Main Content -->
+    <div class="app-content">
+      <!-- Navigation Header -->
+      <header tuiNavigationHeader class="app-header">
+        <span tuiNavigationLogo>
+          <!--<tui-icon icon="@tui.home"/>-->
+          <span tuiFade>MyMiniatureVault</span>
+        </span>
+        <span tuiNavigationSegments></span>
+        <hr/>
+        <!--
+        <button appearance="secondary-grayscale" iconStart="@tui.plus" tuiButton type="button">
+          Create
+        </button>
+        <button iconStart="@tui.bell" tuiIconButton type="button">
+          Notifications
+          <tui-badge-notification/>
+        </button>
+        -->
+        <!-- Dark Mode Toggle -->
+        <button tuiIconButton appearance="secondary-grayscale" [iconStart]="toggleDarkMode() ? '@tui.sun' : '@tui.moon'"
+                size="s" type="button" (click)="darkModeService.darkMode.set(!toggleDarkMode())"
+                [tuiHint]="toggleDarkMode() ? 'Switch to light mode' : 'Switch to dark mode'"></button>
+      </header>
+      <div class="content-container">
+        <aside class="app-sidebar" [tuiNavigationAside]="expanded()">
+          <header>
+            <button tuiAsideItem iconStart="@tui.home" type="button">Home</button>
+            <button tuiAsideItem iconStart="@tui.user" type="button">Creators</button>
+            <button tuiAsideItem iconStart="@tui.boxes" type="button">Bundles</button>
+            <button tuiAsideItem iconStart="@tui.plus" type="button">Add</button>
+          </header>
+          <footer>
+            <hr/>
+            <button tuiAsideItem type="button" [iconStart]="expanded() ? '@tui.chevron-left' : '@tui.chevron-right'"
+                    (click)="handleToggle()">
+              {{ expanded() ? 'Collapse' : 'Expand' }}
+            </button>
+          </footer>
+        </aside>
+        <main class="main-content">
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+        </main>
+      </div>
+    </div>
+  </div>
+</tui-root>
