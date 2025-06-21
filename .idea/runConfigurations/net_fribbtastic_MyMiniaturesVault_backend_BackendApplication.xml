@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="BackendApplication" type="Application" factoryName="Application" nameIsGenerated="true">
-    <option name="MAIN_CLASS_NAME" value="net.fribbtastic.MyMiniatureVault.backend.BackendApplication" />
+  <configuration default="false" name="net.fribbtastic.MyMiniaturesVault.backend.BackendApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+    <option name="MAIN_CLASS_NAME" value="net.fribbtastic.MyMiniaturesVault.backend.BackendApplication" />
     <module name="backend" />
     <extension name="coverage">
       <pattern>

@@ -1,0 +1,16 @@
+# suppress inspection "UnusedProperty" for whole file
+
+# logging
+logging.level.org.springframework.web=ERROR
+logging.level.org.hibernate=ERROR
+logging.level.net.fribbtastic=INFO
+
+# Api config
+springdoc.api-docs.path=/api-docs
+api.version.uri-prefix=/api
+
+# H2 in Memory Database connection
+spring.datasource.url=jdbc:h2:mem:test;DB_CLOSE_DELAY=-1
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=password

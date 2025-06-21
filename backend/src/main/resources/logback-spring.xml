@@ -1,0 +1,18 @@
+<configuration>
+	<include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+	<springProperty scope="context" name="3D-Miniatures-Vault" source="net.fribbtastic.miniaturesvault"/>
+	<!--  Appender to log to console  -->
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<!--  Minimum logging level to be presented in the console logs -->
+			<level>DEBUG</level>
+		</filter>
+		<encoder>
+			<pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) [%class{0}:%line %M\(\)] - %msg%n</pattern>
+			<charset>utf8</charset>
+		</encoder>
+	</appender>
+	<root level="INFO">
+		<appender-ref ref="console"/>
+	</root>
+</configuration>
